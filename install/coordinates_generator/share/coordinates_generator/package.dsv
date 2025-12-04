@@ -1,0 +1,6 @@
+source;share/coordinates_generator/hook/pythonpath.ps1
+source;share/coordinates_generator/hook/pythonpath.dsv
+source;share/coordinates_generator/hook/pythonpath.sh
+source;share/coordinates_generator/hook/ament_prefix_path.ps1
+source;share/coordinates_generator/hook/ament_prefix_path.dsv
+source;share/coordinates_generator/hook/ament_prefix_path.sh

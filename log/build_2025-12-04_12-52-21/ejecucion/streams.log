@@ -1,0 +1,54 @@
+[1.097s] Invoking command in '/home/agilex/agilex_mx/src/ejecucion': PYTHONPATH=/home/agilex/agilex_mx/build/ejecucion/prefix_override:/home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ejecucion build --build-base /home/agilex/agilex_mx/build/ejecucion/build install --record /home/agilex/agilex_mx/build/ejecucion/install.log --single-version-externally-managed
+[1.278s] running egg_info
+[1.278s] creating ../../build/ejecucion/ejecucion.egg-info
+[1.279s] writing ../../build/ejecucion/ejecucion.egg-info/PKG-INFO
+[1.279s] writing dependency_links to ../../build/ejecucion/ejecucion.egg-info/dependency_links.txt
+[1.279s] writing entry points to ../../build/ejecucion/ejecucion.egg-info/entry_points.txt
+[1.279s] writing requirements to ../../build/ejecucion/ejecucion.egg-info/requires.txt
+[1.279s] writing top-level names to ../../build/ejecucion/ejecucion.egg-info/top_level.txt
+[1.279s] writing manifest file '../../build/ejecucion/ejecucion.egg-info/SOURCES.txt'
+[1.281s] reading manifest file '../../build/ejecucion/ejecucion.egg-info/SOURCES.txt'
+[1.281s] writing manifest file '../../build/ejecucion/ejecucion.egg-info/SOURCES.txt'
+[1.281s] running build
+[1.282s] running build_py
+[1.282s] creating /home/agilex/agilex_mx/build/ejecucion/build
+[1.282s] creating /home/agilex/agilex_mx/build/ejecucion/build/lib
+[1.282s] creating /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion
+[1.282s] copying ejecucion/__init__.py -> /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion
+[1.282s] copying ejecucion/pid_controller_node.py -> /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion
+[1.282s] copying ejecucion/target_publisher.py -> /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion
+[1.282s] copying ejecucion/trajectory_controller.py -> /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion
+[1.282s] copying ejecucion/odom_pid_controller.py -> /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion
+[1.282s] copying ejecucion/pid_controller.py -> /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion
+[1.282s] running install
+[1.283s] running install_lib
+[1.283s] creating /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion
+[1.283s] copying /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion/__init__.py -> /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion
+[1.283s] copying /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion/pid_controller_node.py -> /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion
+[1.283s] copying /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion/target_publisher.py -> /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion
+[1.283s] copying /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion/trajectory_controller.py -> /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion
+[1.283s] copying /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion/odom_pid_controller.py -> /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion
+[1.283s] copying /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion/pid_controller.py -> /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion
+[1.284s] byte-compiling /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion/__init__.py to __init__.cpython-310.pyc
+[1.284s] byte-compiling /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion/pid_controller_node.py to pid_controller_node.cpython-310.pyc
+[1.285s] byte-compiling /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion/target_publisher.py to target_publisher.cpython-310.pyc
+[1.285s] byte-compiling /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion/trajectory_controller.py to trajectory_controller.cpython-310.pyc
+[1.286s] byte-compiling /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion/odom_pid_controller.py to odom_pid_controller.cpython-310.pyc
+[1.287s] byte-compiling /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion/pid_controller.py to pid_controller.cpython-310.pyc
+[1.287s] running install_data
+[1.288s] creating /home/agilex/agilex_mx/install/ejecucion/share/ament_index
+[1.288s] creating /home/agilex/agilex_mx/install/ejecucion/share/ament_index/resource_index
+[1.288s] creating /home/agilex/agilex_mx/install/ejecucion/share/ament_index/resource_index/packages
+[1.288s] copying resource/ejecucion -> /home/agilex/agilex_mx/install/ejecucion/share/ament_index/resource_index/packages
+[1.288s] copying package.xml -> /home/agilex/agilex_mx/install/ejecucion/share/ejecucion
+[1.288s] creating /home/agilex/agilex_mx/install/ejecucion/share/ejecucion/launch
+[1.288s] copying launch/control_system.launch.py -> /home/agilex/agilex_mx/install/ejecucion/share/ejecucion/launch
+[1.288s] running install_egg_info
+[1.290s] Copying ../../build/ejecucion/ejecucion.egg-info to /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion-0.0.0-py3.10.egg-info
+[1.290s] running install_scripts
+[1.307s] Installing odom_pid_controller script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+[1.307s] Installing pid_controller script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+[1.308s] Installing target_publisher script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+[1.308s] Installing trajectory_controller script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+[1.308s] writing list of installed files to '/home/agilex/agilex_mx/build/ejecucion/install.log'
+[1.334s] Invoked command in '/home/agilex/agilex_mx/src/ejecucion' returned '0': PYTHONPATH=/home/agilex/agilex_mx/build/ejecucion/prefix_override:/home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ejecucion build --build-base /home/agilex/agilex_mx/build/ejecucion/build install --record /home/agilex/agilex_mx/build/ejecucion/install.log --single-version-externally-managed

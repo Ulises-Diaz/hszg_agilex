@@ -1,8 +1,0 @@
-source;share/vision_tracker/hook/cmake_prefix_path.ps1
-source;share/vision_tracker/hook/cmake_prefix_path.dsv
-source;share/vision_tracker/hook/cmake_prefix_path.sh
-source;share/vision_tracker/local_setup.bash
-source;share/vision_tracker/local_setup.dsv
-source;share/vision_tracker/local_setup.ps1
-source;share/vision_tracker/local_setup.sh
-source;share/vision_tracker/local_setup.zsh

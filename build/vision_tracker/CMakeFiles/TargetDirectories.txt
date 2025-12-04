@@ -1,9 +1,0 @@
-/home/agilex/agilex_mx/build/vision_tracker/CMakeFiles/uninstall.dir
-/home/agilex/agilex_mx/build/vision_tracker/CMakeFiles/vision_tracker_uninstall.dir
-/home/agilex/agilex_mx/build/vision_tracker/CMakeFiles/test.dir
-/home/agilex/agilex_mx/build/vision_tracker/CMakeFiles/edit_cache.dir
-/home/agilex/agilex_mx/build/vision_tracker/CMakeFiles/rebuild_cache.dir
-/home/agilex/agilex_mx/build/vision_tracker/CMakeFiles/list_install_components.dir
-/home/agilex/agilex_mx/build/vision_tracker/CMakeFiles/install.dir
-/home/agilex/agilex_mx/build/vision_tracker/CMakeFiles/install/local.dir
-/home/agilex/agilex_mx/build/vision_tracker/CMakeFiles/install/strip.dir

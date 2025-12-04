@@ -1,0 +1,4 @@
+[console_scripts]
+follower = tracker.follower:main
+person_detector = tracker.person_detector:main
+
