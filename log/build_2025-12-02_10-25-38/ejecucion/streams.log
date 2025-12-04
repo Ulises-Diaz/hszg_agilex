@@ -1,0 +1,22 @@
+[0.461s] Invoking command in '/home/agilex/agilex_mx/src/ejecucion': PYTHONPATH=/home/agilex/agilex_mx/build/ejecucion/prefix_override:/home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ejecucion build --build-base /home/agilex/agilex_mx/build/ejecucion/build install --record /home/agilex/agilex_mx/build/ejecucion/install.log --single-version-externally-managed
+[0.604s] running egg_info
+[0.604s] writing ../../build/ejecucion/ejecucion.egg-info/PKG-INFO
+[0.604s] writing dependency_links to ../../build/ejecucion/ejecucion.egg-info/dependency_links.txt
+[0.604s] writing entry points to ../../build/ejecucion/ejecucion.egg-info/entry_points.txt
+[0.604s] writing requirements to ../../build/ejecucion/ejecucion.egg-info/requires.txt
+[0.604s] writing top-level names to ../../build/ejecucion/ejecucion.egg-info/top_level.txt
+[0.605s] reading manifest file '../../build/ejecucion/ejecucion.egg-info/SOURCES.txt'
+[0.606s] writing manifest file '../../build/ejecucion/ejecucion.egg-info/SOURCES.txt'
+[0.606s] running build
+[0.606s] running build_py
+[0.606s] running install
+[0.607s] running install_lib
+[0.607s] running install_data
+[0.608s] running install_egg_info
+[0.609s] removing '/home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion-0.0.0-py3.10.egg-info' (and everything under it)
+[0.609s] Copying ../../build/ejecucion/ejecucion.egg-info to /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion-0.0.0-py3.10.egg-info
+[0.610s] running install_scripts
+[0.621s] Installing pid_controller script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+[0.621s] Installing target_publisher script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+[0.621s] writing list of installed files to '/home/agilex/agilex_mx/build/ejecucion/install.log'
+[0.636s] Invoked command in '/home/agilex/agilex_mx/src/ejecucion' returned '0': PYTHONPATH=/home/agilex/agilex_mx/build/ejecucion/prefix_override:/home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ejecucion build --build-base /home/agilex/agilex_mx/build/ejecucion/build install --record /home/agilex/agilex_mx/build/ejecucion/install.log --single-version-externally-managed

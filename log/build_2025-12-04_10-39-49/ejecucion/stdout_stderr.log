@@ -1,0 +1,26 @@
+running egg_info
+writing ../../build/ejecucion/ejecucion.egg-info/PKG-INFO
+writing dependency_links to ../../build/ejecucion/ejecucion.egg-info/dependency_links.txt
+writing entry points to ../../build/ejecucion/ejecucion.egg-info/entry_points.txt
+writing requirements to ../../build/ejecucion/ejecucion.egg-info/requires.txt
+writing top-level names to ../../build/ejecucion/ejecucion.egg-info/top_level.txt
+reading manifest file '../../build/ejecucion/ejecucion.egg-info/SOURCES.txt'
+writing manifest file '../../build/ejecucion/ejecucion.egg-info/SOURCES.txt'
+running build
+running build_py
+copying ejecucion/trajectory_controller.py -> /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion
+running install
+running install_lib
+copying /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion/trajectory_controller.py -> /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion
+byte-compiling /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion/trajectory_controller.py to trajectory_controller.cpython-310.pyc
+running install_data
+copying launch/control_system.launch.py -> /home/agilex/agilex_mx/install/ejecucion/share/ejecucion/launch
+running install_egg_info
+removing '/home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/ejecucion/ejecucion.egg-info to /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion-0.0.0-py3.10.egg-info
+running install_scripts
+Installing odom_pid_controller script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+Installing pid_controller script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+Installing target_publisher script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+Installing trajectory_controller script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+writing list of installed files to '/home/agilex/agilex_mx/build/ejecucion/install.log'

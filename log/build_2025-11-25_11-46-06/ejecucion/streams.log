@@ -1,0 +1,31 @@
+[0.422s] Invoking command in '/home/agilex/ros2_ws/src/ejecucion': PYTHONPATH=/home/agilex/ros2_ws/build/ejecucion/prefix_override:/home/agilex/ros2_ws/install/ejecucion/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ejecucion build --build-base /home/agilex/ros2_ws/build/ejecucion/build install --record /home/agilex/ros2_ws/build/ejecucion/install.log --single-version-externally-managed
+[0.561s] running egg_info
+[0.561s] writing ../../build/ejecucion/ejecucion.egg-info/PKG-INFO
+[0.562s] writing dependency_links to ../../build/ejecucion/ejecucion.egg-info/dependency_links.txt
+[0.562s] writing entry points to ../../build/ejecucion/ejecucion.egg-info/entry_points.txt
+[0.562s] writing requirements to ../../build/ejecucion/ejecucion.egg-info/requires.txt
+[0.562s] writing top-level names to ../../build/ejecucion/ejecucion.egg-info/top_level.txt
+[0.563s] reading manifest file '../../build/ejecucion/ejecucion.egg-info/SOURCES.txt'
+[0.563s] writing manifest file '../../build/ejecucion/ejecucion.egg-info/SOURCES.txt'
+[0.563s] running build
+[0.563s] running build_py
+[0.563s] copying ejecucion/pid_controller_node.py -> /home/agilex/ros2_ws/build/ejecucion/build/lib/ejecucion
+[0.563s] copying ejecucion/target_publisher.py -> /home/agilex/ros2_ws/build/ejecucion/build/lib/ejecucion
+[0.563s] copying ejecucion/pid_controller.py -> /home/agilex/ros2_ws/build/ejecucion/build/lib/ejecucion
+[0.563s] running install
+[0.563s] running install_lib
+[0.564s] copying /home/agilex/ros2_ws/build/ejecucion/build/lib/ejecucion/pid_controller_node.py -> /home/agilex/ros2_ws/install/ejecucion/lib/python3.10/site-packages/ejecucion
+[0.564s] copying /home/agilex/ros2_ws/build/ejecucion/build/lib/ejecucion/target_publisher.py -> /home/agilex/ros2_ws/install/ejecucion/lib/python3.10/site-packages/ejecucion
+[0.564s] copying /home/agilex/ros2_ws/build/ejecucion/build/lib/ejecucion/pid_controller.py -> /home/agilex/ros2_ws/install/ejecucion/lib/python3.10/site-packages/ejecucion
+[0.564s] byte-compiling /home/agilex/ros2_ws/install/ejecucion/lib/python3.10/site-packages/ejecucion/pid_controller_node.py to pid_controller_node.cpython-310.pyc
+[0.565s] byte-compiling /home/agilex/ros2_ws/install/ejecucion/lib/python3.10/site-packages/ejecucion/target_publisher.py to target_publisher.cpython-310.pyc
+[0.565s] byte-compiling /home/agilex/ros2_ws/install/ejecucion/lib/python3.10/site-packages/ejecucion/pid_controller.py to pid_controller.cpython-310.pyc
+[0.565s] running install_data
+[0.566s] running install_egg_info
+[0.567s] removing '/home/agilex/ros2_ws/install/ejecucion/lib/python3.10/site-packages/ejecucion-0.0.0-py3.10.egg-info' (and everything under it)
+[0.567s] Copying ../../build/ejecucion/ejecucion.egg-info to /home/agilex/ros2_ws/install/ejecucion/lib/python3.10/site-packages/ejecucion-0.0.0-py3.10.egg-info
+[0.567s] running install_scripts
+[0.580s] Installing pid_controller script to /home/agilex/ros2_ws/install/ejecucion/lib/ejecucion
+[0.580s] Installing target_publisher script to /home/agilex/ros2_ws/install/ejecucion/lib/ejecucion
+[0.580s] writing list of installed files to '/home/agilex/ros2_ws/build/ejecucion/install.log'
+[0.594s] Invoked command in '/home/agilex/ros2_ws/src/ejecucion' returned '0': PYTHONPATH=/home/agilex/ros2_ws/build/ejecucion/prefix_override:/home/agilex/ros2_ws/install/ejecucion/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ejecucion build --build-base /home/agilex/ros2_ws/build/ejecucion/build install --record /home/agilex/ros2_ws/build/ejecucion/install.log --single-version-externally-managed

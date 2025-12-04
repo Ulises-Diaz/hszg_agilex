@@ -1,0 +1,26 @@
+[0.493s] Invoking command in '/home/agilex/agilex_mx/src/ejecucion': PYTHONPATH=/home/agilex/agilex_mx/build/ejecucion/prefix_override:/home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ejecucion build --build-base /home/agilex/agilex_mx/build/ejecucion/build install --record /home/agilex/agilex_mx/build/ejecucion/install.log --single-version-externally-managed
+[0.635s] running egg_info
+[0.635s] writing ../../build/ejecucion/ejecucion.egg-info/PKG-INFO
+[0.635s] writing dependency_links to ../../build/ejecucion/ejecucion.egg-info/dependency_links.txt
+[0.635s] writing entry points to ../../build/ejecucion/ejecucion.egg-info/entry_points.txt
+[0.635s] writing requirements to ../../build/ejecucion/ejecucion.egg-info/requires.txt
+[0.635s] writing top-level names to ../../build/ejecucion/ejecucion.egg-info/top_level.txt
+[0.636s] reading manifest file '../../build/ejecucion/ejecucion.egg-info/SOURCES.txt'
+[0.636s] writing manifest file '../../build/ejecucion/ejecucion.egg-info/SOURCES.txt'
+[0.636s] running build
+[0.637s] running build_py
+[0.637s] copying ejecucion/odom_pid_controller.py -> /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion
+[0.637s] running install
+[0.637s] running install_lib
+[0.637s] copying /home/agilex/agilex_mx/build/ejecucion/build/lib/ejecucion/odom_pid_controller.py -> /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion
+[0.638s] byte-compiling /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion/odom_pid_controller.py to odom_pid_controller.cpython-310.pyc
+[0.638s] running install_data
+[0.638s] running install_egg_info
+[0.639s] removing '/home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion-0.0.0-py3.10.egg-info' (and everything under it)
+[0.640s] Copying ../../build/ejecucion/ejecucion.egg-info to /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion-0.0.0-py3.10.egg-info
+[0.640s] running install_scripts
+[0.652s] Installing odom_pid_controller script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+[0.652s] Installing pid_controller script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+[0.652s] Installing target_publisher script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+[0.652s] writing list of installed files to '/home/agilex/agilex_mx/build/ejecucion/install.log'
+[0.666s] Invoked command in '/home/agilex/agilex_mx/src/ejecucion' returned '0': PYTHONPATH=/home/agilex/agilex_mx/build/ejecucion/prefix_override:/home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ejecucion build --build-base /home/agilex/agilex_mx/build/ejecucion/build install --record /home/agilex/agilex_mx/build/ejecucion/install.log --single-version-externally-managed

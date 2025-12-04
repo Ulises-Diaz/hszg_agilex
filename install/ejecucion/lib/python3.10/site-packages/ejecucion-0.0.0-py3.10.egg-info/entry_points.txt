@@ -1,0 +1,6 @@
+[console_scripts]
+odom_pid_controller = ejecucion.odom_pid_controller:main
+pid_controller = ejecucion.pid_controller_node:main
+target_publisher = ejecucion.target_publisher:main
+trajectory_controller = ejecucion.trajectory_controller:main
+
