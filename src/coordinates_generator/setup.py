@@ -24,7 +24,7 @@ setup(
     entry_points={
         'console_scripts': [
             'person_detector = coordinates_generator.person_detector:main',
-            'person_tracker = coordinates_generator.preson_tracker:main',
+            'person_tracker = coordinates_generator.person_tracker:main',
         ],
     },
 )
