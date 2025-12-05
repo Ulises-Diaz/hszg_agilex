@@ -2,7 +2,7 @@
 
 import rclpy
 from rclpy.node import Node
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import Twist, PoseStamped
 from nav_msgs.msg import Odometry
 from ejecucion.pid_controller import PIDController
 import math
@@ -20,21 +20,30 @@ class TrajectoryController(Node):
             10
         )
         
+        # Suscripción a target_pose
+        self.target_sub = self.create_subscription(
+            PoseStamped,
+            '/target_person_pose',
+            self.target_pose_callback,
+            10
+        )
+        
         # Publisher de comandos
         self.cmd_pub = self.create_publisher(Twist, '/cmd_vel', 10)
         
-        # Parámetros PID
-        self.declare_parameter('kp_linear', 0.6)
-        self.declare_parameter('ki_linear', 0.01)
-        self.declare_parameter('kd_linear', 0.15)
+        # Parámetros PID - OPTIMIZADOS
+        self.declare_parameter('kp_linear', 0.45)
+        self.declare_parameter('ki_linear', 0.003)
+        self.declare_parameter('kd_linear', 0.08)
         
-        self.declare_parameter('kp_angular', 1.5)
-        self.declare_parameter('ki_angular', 0.005)
-        self.declare_parameter('kd_angular', 0.1)
+        self.declare_parameter('kp_angular', 0.6)  # Más bajo para suavidad
+        self.declare_parameter('ki_angular', 0.001)
+        self.declare_parameter('kd_angular', 0.05)
         
-        self.declare_parameter('max_linear_speed', 0.25)
-        self.declare_parameter('max_angular_speed', 0.8)
-        self.declare_parameter('distance_threshold', 0.1)
+        self.declare_parameter('max_linear_speed', 0.22)
+        self.declare_parameter('max_angular_speed', 0.4)  # Más bajo
+        self.declare_parameter('distance_threshold', 0.3)
+        self.declare_parameter('safety_distance', 0.2)
         
         # Crear PIDs
         self.pid_linear = PIDController(
@@ -57,46 +66,53 @@ class TrajectoryController(Node):
             )
         )
         
-        # Lista de waypoints (x, y) - MODIFICA AQUÍ TU TRAYECTORIA
-        self.waypoints_rel = [
-            [0.5, 0.0],   # Punto 1: 0.5m adelante
-            [0.5, 0.5],   # Punto 2: 0.5m adelante, 0.5m derecha
-            [0.0, 0.5],   # Punto 3: regresar en X, mantener Y
-            [0.0, 0.0]    # Punto 4: volver al origen
-        ]
-        
         # Variables
+        self.target_x = None
+        self.target_z = None
+        self.has_target = False
+        self.target_update_count = 0
+        
         self.current_x = 0.0
         self.current_y = 0.0
         self.current_yaw = 0.0
-        self.start_x = None
-        self.start_y = None
-        self.current_waypoint_idx = 0
-        self.waypoints_global = []
         self.initialized = False
-        self.trajectory_completed = False
         
         self.last_time = time.time()
         
-        # Timer para actualizar parámetros PID
         self.param_timer = self.create_timer(1.0, self.update_pid_parameters)
         
-        self.get_logger().info('Trajectory Controller con PID completo iniciado')
-        self.get_logger().info('Esperando odometría en /wheel/odom...')
+        self.get_logger().info('🤖 Controller SIMPLIFICADO - Control Reactivo')
+        self.get_logger().info(f'⚙️  PID Angular: Kp={self.get_parameter("kp_angular").value}')
+        self.get_logger().info(f'📏 Safety: {self.get_parameter("safety_distance").value}m')
+    
+    def target_pose_callback(self, msg: PoseStamped):
+        """Callback para target - coordenadas relativas"""
+        # Estas son RELATIVAS al robot/cámara
+        self.target_x = -msg.pose.position.x  # Lateral
+        self.target_z = msg.pose.position.z  # Profundidad
+        self.has_target = True
+        
+        self.target_update_count += 1
+        if self.target_update_count % 10 == 0:
+            self.pid_linear.reset()
+            self.pid_angular.reset()
+        
+        if self.target_update_count % 5 == 0:
+            self.get_logger().info(
+                f'🎯 Camera: X={self.target_x:.2f}m (lateral), Z={self.target_z:.2f}m (prof)',
+                throttle_duration_sec=1.0
+            )
     
     def update_pid_parameters(self):
-        """Actualiza parámetros PID dinámicamente"""
-        # PID Lineal
+        """Actualiza parámetros PID"""
         self.pid_linear.Kp = self.get_parameter('kp_linear').value
         self.pid_linear.Ki = self.get_parameter('ki_linear').value
         self.pid_linear.Kd = self.get_parameter('kd_linear').value
         
-        # PID Angular
         self.pid_angular.Kp = self.get_parameter('kp_angular').value
         self.pid_angular.Ki = self.get_parameter('ki_angular').value
         self.pid_angular.Kd = self.get_parameter('kd_angular').value
         
-        # Actualizar límites
         max_linear = self.get_parameter('max_linear_speed').value
         max_angular = self.get_parameter('max_angular_speed').value
         self.pid_linear.output_limits = (-max_linear, max_linear)
@@ -109,118 +125,100 @@ class TrajectoryController(Node):
         return math.atan2(siny_cosp, cosy_cosp)
     
     def odom_callback(self, msg: Odometry):
-        """Callback de odometría"""
-        # Actualizar posición actual
+        """Callback de odometría - CONTROL REACTIVO SIMPLE"""
         self.current_x = msg.pose.pose.position.x
         self.current_y = msg.pose.pose.position.y
         self.current_yaw = self.quaternion_to_yaw(msg.pose.pose.orientation)
         
-        # Calcular dt
         current_time = time.time()
         dt = current_time - self.last_time
         self.last_time = current_time
         
-        # Inicializar waypoints globales la primera vez
+        if dt < 0.001 or dt > 1.0:
+            dt = 0.02
+        
         if not self.initialized:
-            self.start_x = self.current_x
-            self.start_y = self.current_y
-            
-            # Convertir waypoints relativos a globales
-            waypoints_rel = self.waypoints_rel
-            for wp in waypoints_rel:
-                # Transformar coordenadas relativas al marco global
-                cos_yaw = math.cos(self.current_yaw)
-                sin_yaw = math.sin(self.current_yaw)
-                global_x = self.start_x + wp[0] * cos_yaw - wp[1] * sin_yaw
-                global_y = self.start_y + wp[0] * sin_yaw + wp[1] * cos_yaw
-                self.waypoints_global.append([global_x, global_y])
-            
             self.initialized = True
-            self.get_logger().info(f'Trayectoria iniciada con {len(self.waypoints_global)} waypoints')
-            self.get_logger().info(f'Posición inicial: ({self.start_x:.2f}, {self.start_y:.2f}), Yaw: {math.degrees(self.current_yaw):.1f}°')
-            for i, wp in enumerate(self.waypoints_global):
-                self.get_logger().info(f'  Waypoint {i+1}: ({wp[0]:.2f}, {wp[1]:.2f})')
-        
-        # Si ya completó la trayectoria, detener
-        if self.trajectory_completed:
-            return
-        
-        # Verificar si hay waypoints pendientes
-        if self.current_waypoint_idx >= len(self.waypoints_global):
-            if not self.trajectory_completed:
-                self.get_logger().info('🎉 ✅ TRAYECTORIA COMPLETADA!')
-                self.trajectory_completed = True
-                self.stop_robot()
-                # Resetear PIDs
-                self.pid_linear.reset()
-                self.pid_angular.reset()
-            return
-        
-        # Waypoint actual
-        target_x = self.waypoints_global[self.current_waypoint_idx][0]
-        target_y = self.waypoints_global[self.current_waypoint_idx][1]
-        
-        # Calcular error
-        error_x = target_x - self.current_x
-        error_y = target_y - self.current_y
-        distance_to_waypoint = math.sqrt(error_x**2 + error_y**2)
-        
-        # Verificar si llegó al waypoint actual
-        threshold = self.get_parameter('distance_threshold').value
-        if distance_to_waypoint < threshold:
             self.get_logger().info(
-                f'✅ Waypoint {self.current_waypoint_idx + 1}/{len(self.waypoints_global)} alcanzado!'
+                f'✅ Odom: ({self.current_x:.2f}, {self.current_y:.2f}), Yaw: {math.degrees(self.current_yaw):.1f}°'
             )
-            self.current_waypoint_idx += 1
-            
-            # Resetear PIDs para el siguiente waypoint
+        
+        if not self.has_target:
+            return
+        
+        # ============================================================
+        # CONTROL REACTIVO SIMPLE - Usa coordenadas RELATIVAS directamente
+        # ============================================================
+        
+        safety_distance = self.get_parameter('safety_distance').value
+        
+        # Coordenadas RELATIVAS al robot (desde la cámara)
+        lateral = self.target_x      # Lateral: + derecha, - izquierda
+        depth = self.target_z        # Profundidad: + adelante
+        
+        # Aplicar distancia de seguridad
+        adjusted_depth = max(0.1, depth - safety_distance)
+        
+        # Calcular distancia euclidiana al target
+        distance_to_target = math.sqrt(lateral**2 + adjusted_depth**2)
+        
+        # Verificar si llegó
+        threshold = self.get_parameter('distance_threshold').value
+        if distance_to_target < threshold:
+            self.get_logger().info('✅ Target alcanzado!')
+            self.has_target = False
+            self.stop_robot()
             self.pid_linear.reset()
             self.pid_angular.reset()
-            
-            # Si hay más waypoints, continuar
-            if self.current_waypoint_idx < len(self.waypoints_global):
-                next_wp = self.waypoints_global[self.current_waypoint_idx]
-                self.get_logger().info(
-                    f'➡️  Siguiente waypoint: ({next_wp[0]:.2f}, {next_wp[1]:.2f})'
-                )
             return
         
-        # Calcular ángulo hacia el waypoint
-        angle_to_waypoint = math.atan2(error_y, error_x)
-        angle_error = angle_to_waypoint - self.current_yaw
+        # Calcular ángulo RELATIVO hacia el target
+        # atan2(lateral, adelante) da el ángulo que necesitamos girar
+        angle_to_target = math.atan2(lateral, adjusted_depth)
         
-        # Normalizar ángulo entre -pi y pi
-        while angle_error > math.pi:
-            angle_error -= 2 * math.pi
-        while angle_error < -math.pi:
-            angle_error += 2 * math.pi
+        # Este ángulo YA es el error angular (relativo al frente del robot)
+        angle_error = angle_to_target
+        
+        # Factor de reducción según ángulo
+        if abs(angle_error) > math.radians(30):
+            linear_factor = 0.2  # Gira primero
+        elif abs(angle_error) > math.radians(15):
+            linear_factor = 0.5
+        else:
+            linear_factor = 1.0  # Avanza normalmente
         
         # Calcular velocidades con PID
-        vel_linear = self.pid_linear.compute(distance_to_waypoint, dt)
+        vel_linear = self.pid_linear.compute(adjusted_depth, dt) * linear_factor
         vel_angular = self.pid_angular.compute(angle_error, dt)
+        
+        # Reducir angular si estamos cerca
+        if distance_to_target < 0.5:
+            vel_angular *= 0.6
         
         # Publicar comando
         cmd = Twist()
-        cmd.linear.x = vel_linear
-        cmd.angular.z = vel_angular
+        cmd.linear.x = float(vel_linear)
+        cmd.angular.z = float(vel_angular)
         self.cmd_pub.publish(cmd)
         
         # Log
         self.get_logger().info(
-            f'WP {self.current_waypoint_idx + 1}/{len(self.waypoints_global)} | '
-            f'Pos: ({self.current_x:.2f}, {self.current_y:.2f}) | '
-            f'Target: ({target_x:.2f}, {target_y:.2f}) | '
-            f'Dist: {distance_to_waypoint:.2f}m | Ang: {math.degrees(angle_error):.1f}° | '
-            f'Vel: lin={vel_linear:.2f}, ang={vel_angular:.2f}',
+            f'📍 Rel: Lat={lateral:.2f}m, Prof={adjusted_depth:.2f}m | '
+            f'📏 Dist={distance_to_target:.2f}m | 📐 Ang={math.degrees(angle_error):.0f}° | '
+            f'🚀 L:{vel_linear:.2f} A:{vel_angular:.2f}',
             throttle_duration_sec=0.5
         )
     
     def stop_robot(self):
         """Detiene el robot"""
-        cmd = Twist()
-        cmd.linear.x = 0.0
-        cmd.angular.z = 0.0
-        self.cmd_pub.publish(cmd)
+        try:
+            cmd = Twist()
+            cmd.linear.x = 0.0
+            cmd.angular.z = 0.0
+            self.cmd_pub.publish(cmd)
+            self.get_logger().info('🛑 Robot detenido')
+        except Exception as e:
+            self.get_logger().error(f'Error al detener: {e}')
 
 def main(args=None):
     rclpy.init(args=args)
@@ -229,11 +227,14 @@ def main(args=None):
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
-        pass
+        node.get_logger().info('🛑 Interrupción')
+    except Exception as e:
+        node.get_logger().error(f'Error: {e}')
     finally:
         node.stop_robot()
         node.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

@@ -1,0 +1,25 @@
+[0.925s] Invoking command in '/home/agilex/agilex_mx/src/ejecucion': PYTHONPATH=/home/agilex/agilex_mx/build/ejecucion/prefix_override:/home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ejecucion build --build-base /home/agilex/agilex_mx/build/ejecucion/build install --record /home/agilex/agilex_mx/build/ejecucion/install.log --single-version-externally-managed
+[1.087s] running egg_info
+[1.087s] writing ../../build/ejecucion/ejecucion.egg-info/PKG-INFO
+[1.088s] writing dependency_links to ../../build/ejecucion/ejecucion.egg-info/dependency_links.txt
+[1.088s] writing entry points to ../../build/ejecucion/ejecucion.egg-info/entry_points.txt
+[1.088s] writing requirements to ../../build/ejecucion/ejecucion.egg-info/requires.txt
+[1.088s] writing top-level names to ../../build/ejecucion/ejecucion.egg-info/top_level.txt
+[1.089s] reading manifest file '../../build/ejecucion/ejecucion.egg-info/SOURCES.txt'
+[1.089s] writing manifest file '../../build/ejecucion/ejecucion.egg-info/SOURCES.txt'
+[1.089s] running build
+[1.089s] running build_py
+[1.090s] running install
+[1.090s] running install_lib
+[1.091s] running install_data
+[1.091s] copying launch/control_system.launch.py -> /home/agilex/agilex_mx/install/ejecucion/share/ejecucion/launch
+[1.091s] running install_egg_info
+[1.092s] removing '/home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion-0.0.0-py3.10.egg-info' (and everything under it)
+[1.092s] Copying ../../build/ejecucion/ejecucion.egg-info to /home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages/ejecucion-0.0.0-py3.10.egg-info
+[1.093s] running install_scripts
+[1.107s] Installing odom_pid_controller script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+[1.108s] Installing pid_controller script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+[1.108s] Installing target_publisher script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+[1.108s] Installing trajectory_controller script to /home/agilex/agilex_mx/install/ejecucion/lib/ejecucion
+[1.108s] writing list of installed files to '/home/agilex/agilex_mx/build/ejecucion/install.log'
+[1.185s] Invoked command in '/home/agilex/agilex_mx/src/ejecucion' returned '0': PYTHONPATH=/home/agilex/agilex_mx/build/ejecucion/prefix_override:/home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ejecucion build --build-base /home/agilex/agilex_mx/build/ejecucion/build install --record /home/agilex/agilex_mx/build/ejecucion/install.log --single-version-externally-managed

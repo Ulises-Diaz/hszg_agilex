@@ -16,21 +16,34 @@ def generate_launch_description():
                     'limo_base.launch.py'
                 ])
             ]),
-            launch_arguments={'port_name': 'ttyUSB1'}.items()  # Cambia el puerto si es necesario
+            launch_arguments={'port_name': 'ttyUSB1'}.items()
         ),
         
-       # 2. Nodo Trajectory Controller
+        # 2. Nodo Person Tracker (con auto-select activado)
+        Node(
+            package='coordinates_generator',
+            executable='person_tracker',
+            name='person_tracker',
+            output='screen',
+            parameters=[
+                {'auto_select_closest': True},  # Auto-seleccionar persona más cercana
+                {'iou_threshold': 0.3},
+                {'max_age': 30},
+            ]
+        ),
+        
+        # 3. Nodo Trajectory Controller
         Node(
             package='ejecucion',
             executable='trajectory_controller',
             name='trajectory_controller',
             output='screen',
-            parameters=[
-                {'kp_linear': 0.5},
-                {'kp_angular': 2.0},
-                {'max_linear_speed': 0.2},
-                {'max_angular_speed': 0.8},
-                {'distance_threshold': 0.1},
-            ]
+            # parameters=[
+            #     {'kp_linear': 0.5},
+            #     {'kp_angular': 2.0},
+            #     {'max_linear_speed': 0.2},
+            #     {'max_angular_speed': 0.8},
+            #     {'distance_threshold': 0.5},  # 50cm de distancia mínima
+            # ]
         ),
     ])

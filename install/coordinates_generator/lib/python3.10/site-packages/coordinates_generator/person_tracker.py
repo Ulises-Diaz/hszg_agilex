@@ -86,7 +86,7 @@ class PersonTrackerNode(Node):
         )
         
         # Publishers
-        self.pose_pub = self.create_publisher(PoseStamped, target_pose_topic, 10)
+        self.pose_pub = self.create_publisher(PoseStamped, "/target_person_pose", 10)
         self.debug_pub = self.create_publisher(Image, debug_topic, 10)
         self.status_pub = self.create_publisher(String, status_topic, 10)
         
@@ -203,10 +203,8 @@ class PersonTrackerNode(Node):
                 track['header'] = header
                 matched_det_indices.add(best_det_idx)
             else:
-                # No encontró match, incrementar edad
                 track['age'] += 1
         
-        # Crear nuevos tracks para detecciones no emparejadas
         for idx, det in enumerate(detections):
             if idx not in matched_det_indices:
                 self.tracks[self.next_id] = {
@@ -221,7 +219,6 @@ class PersonTrackerNode(Node):
                 self.get_logger().info(f'Nueva persona detectada: ID {self.next_id}')
                 self.next_id += 1
         
-        # Eliminar tracks viejos
         to_remove = []
         for track_id, track in self.tracks.items():
             if track['age'] > self.max_age:
@@ -235,11 +232,9 @@ class PersonTrackerNode(Node):
             self.get_logger().info(f'Track {track_id} eliminado (muy viejo)')
     
     def calculate_iou(self, bbox1, bbox2):
-        """Calcular Intersection over Union"""
         x1_min, y1_min, x1_max, y1_max = bbox1
         x2_min, y2_min, x2_max, y2_max = bbox2
         
-        # Área de intersección
         inter_x_min = max(x1_min, x2_min)
         inter_y_min = max(y1_min, y2_min)
         inter_x_max = min(x1_max, x2_max)
@@ -250,7 +245,6 @@ class PersonTrackerNode(Node):
         
         inter_area = (inter_x_max - inter_x_min) * (inter_y_max - inter_y_min)
         
-        # Área de unión
         bbox1_area = (x1_max - x1_min) * (y1_max - y1_min)
         bbox2_area = (x2_max - x2_min) * (y2_max - y2_min)
         union_area = bbox1_area + bbox2_area - inter_area
@@ -344,19 +338,17 @@ class PersonTrackerNode(Node):
             x1, y1, x2, y2 = [int(v) for v in track['bbox']]
             cx, cy = [int(v) for v in track['center']]
             
-            # Color: verde si está seleccionado, azul si no
             if track_id == self.selected_id:
-                color = (0, 255, 0)  # Verde
+                color = (0, 255, 0)  
                 thickness = 3
             else:
-                color = (255, 0, 0)  # Azul
+                color = (255, 0, 0)  
                 thickness = 2
             
             # Dibujar bbox
             cv2.rectangle(depth_colormap, (x1, y1), (x2, y2), color, thickness)
             cv2.circle(depth_colormap, (cx, cy), 5, color, -1)
             
-            # Texto con ID
             text = f'ID:{track_id}'
             if track_id == self.selected_id:
                 text += ' [TARGET]'
@@ -364,12 +356,10 @@ class PersonTrackerNode(Node):
             cv2.putText(depth_colormap, text, (x1, y1-10),
                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
         
-        # Info general
         info_text = f'Tracks: {len(self.tracks)} | Target: {self.selected_id if self.selected_id else "None"}'
         cv2.putText(depth_colormap, info_text, (10, 30),
                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
         
-        # Publicar
         try:
             debug_msg = self.bridge.cv2_to_imgmsg(depth_colormap, 'bgr8')
             self.debug_pub.publish(debug_msg)
