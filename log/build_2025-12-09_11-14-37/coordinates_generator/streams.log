@@ -1,0 +1,25 @@
+[0.965s] Invoking command in '/home/agilex/agilex_mx/src/coordinates_generator': PYTHONPATH=/home/agilex/agilex_mx/build/coordinates_generator/prefix_override:/home/agilex/agilex_mx/install/coordinates_generator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/coordinates_generator build --build-base /home/agilex/agilex_mx/build/coordinates_generator/build install --record /home/agilex/agilex_mx/build/coordinates_generator/install.log --single-version-externally-managed
+[1.130s] running egg_info
+[1.131s] writing ../../build/coordinates_generator/coordinates_generator.egg-info/PKG-INFO
+[1.131s] writing dependency_links to ../../build/coordinates_generator/coordinates_generator.egg-info/dependency_links.txt
+[1.131s] writing entry points to ../../build/coordinates_generator/coordinates_generator.egg-info/entry_points.txt
+[1.131s] writing requirements to ../../build/coordinates_generator/coordinates_generator.egg-info/requires.txt
+[1.131s] writing top-level names to ../../build/coordinates_generator/coordinates_generator.egg-info/top_level.txt
+[1.133s] reading manifest file '../../build/coordinates_generator/coordinates_generator.egg-info/SOURCES.txt'
+[1.134s] writing manifest file '../../build/coordinates_generator/coordinates_generator.egg-info/SOURCES.txt'
+[1.134s] running build
+[1.134s] running build_py
+[1.134s] copying coordinates_generator/person_tracker.py -> /home/agilex/agilex_mx/build/coordinates_generator/build/lib/coordinates_generator
+[1.135s] running install
+[1.135s] running install_lib
+[1.136s] copying /home/agilex/agilex_mx/build/coordinates_generator/build/lib/coordinates_generator/person_tracker.py -> /home/agilex/agilex_mx/install/coordinates_generator/lib/python3.10/site-packages/coordinates_generator
+[1.137s] byte-compiling /home/agilex/agilex_mx/install/coordinates_generator/lib/python3.10/site-packages/coordinates_generator/person_tracker.py to person_tracker.cpython-310.pyc
+[1.139s] running install_data
+[1.140s] running install_egg_info
+[1.141s] removing '/home/agilex/agilex_mx/install/coordinates_generator/lib/python3.10/site-packages/coordinates_generator-0.1.0-py3.10.egg-info' (and everything under it)
+[1.141s] Copying ../../build/coordinates_generator/coordinates_generator.egg-info to /home/agilex/agilex_mx/install/coordinates_generator/lib/python3.10/site-packages/coordinates_generator-0.1.0-py3.10.egg-info
+[1.142s] running install_scripts
+[1.156s] Installing person_detector script to /home/agilex/agilex_mx/install/coordinates_generator/lib/coordinates_generator
+[1.156s] Installing person_tracker script to /home/agilex/agilex_mx/install/coordinates_generator/lib/coordinates_generator
+[1.156s] writing list of installed files to '/home/agilex/agilex_mx/build/coordinates_generator/install.log'
+[1.202s] Invoked command in '/home/agilex/agilex_mx/src/coordinates_generator' returned '0': PYTHONPATH=/home/agilex/agilex_mx/build/coordinates_generator/prefix_override:/home/agilex/agilex_mx/install/coordinates_generator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/coordinates_generator build --build-base /home/agilex/agilex_mx/build/coordinates_generator/build install --record /home/agilex/agilex_mx/build/coordinates_generator/install.log --single-version-externally-managed

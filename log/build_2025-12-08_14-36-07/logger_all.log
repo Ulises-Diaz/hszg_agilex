@@ -1,0 +1,228 @@
+[0.513s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.513s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ec845cd9030>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ec845f69480>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ec845f69480>>)
+[0.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.537s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/agilex/agilex_mx'
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src/coordinates_generator) by extensions ['ignore', 'ignore_ament_install']
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src/coordinates_generator) by extension 'ignore'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src/coordinates_generator) by extension 'ignore_ament_install'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src/coordinates_generator) by extensions ['colcon_pkg']
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src/coordinates_generator) by extension 'colcon_pkg'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src/coordinates_generator) by extensions ['colcon_meta']
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src/coordinates_generator) by extension 'colcon_meta'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src/coordinates_generator) by extensions ['ros']
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src/coordinates_generator) by extension 'ros'
+[0.547s] DEBUG:colcon.colcon_core.package_identification:Package 'src/coordinates_generator' with type 'ros.ament_python' and name 'coordinates_generator'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/ejecucion) by extensions ['ignore', 'ignore_ament_install']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/ejecucion) by extension 'ignore'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/ejecucion) by extension 'ignore_ament_install'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/ejecucion) by extensions ['colcon_pkg']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/ejecucion) by extension 'colcon_pkg'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/ejecucion) by extensions ['colcon_meta']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/ejecucion) by extension 'colcon_meta'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/ejecucion) by extensions ['ros']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/ejecucion) by extension 'ros'
+[0.548s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ejecucion' with type 'ros.ament_python' and name 'ejecucion'
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(src/tracker) by extensions ['ignore', 'ignore_ament_install']
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(src/tracker) by extension 'ignore'
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(src/tracker) by extension 'ignore_ament_install'
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(src/tracker) by extensions ['colcon_pkg']
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(src/tracker) by extension 'colcon_pkg'
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(src/tracker) by extensions ['colcon_meta']
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(src/tracker) by extension 'colcon_meta'
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(src/tracker) by extensions ['ros']
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(src/tracker) by extension 'ros'
+[0.548s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tracker' with type 'ros.ament_python' and name 'tracker'
+[0.548s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.548s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.548s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.548s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.548s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.600s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.600s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.616s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/agilex/agilex_mx/install
+[0.630s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 61 installed packages in /home/agilex/agilex_ws/install
+[0.639s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 365 installed packages in /opt/ros/humble
+[0.640s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.694s] Level 5:colcon.colcon_core.verb:set package 'coordinates_generator' build argument 'cmake_args' from command line to 'None'
+[0.694s] Level 5:colcon.colcon_core.verb:set package 'coordinates_generator' build argument 'cmake_target' from command line to 'None'
+[0.694s] Level 5:colcon.colcon_core.verb:set package 'coordinates_generator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.694s] Level 5:colcon.colcon_core.verb:set package 'coordinates_generator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.694s] Level 5:colcon.colcon_core.verb:set package 'coordinates_generator' build argument 'cmake_clean_first' from command line to 'False'
+[0.694s] Level 5:colcon.colcon_core.verb:set package 'coordinates_generator' build argument 'cmake_force_configure' from command line to 'False'
+[0.694s] Level 5:colcon.colcon_core.verb:set package 'coordinates_generator' build argument 'ament_cmake_args' from command line to 'None'
+[0.694s] Level 5:colcon.colcon_core.verb:set package 'coordinates_generator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.694s] Level 5:colcon.colcon_core.verb:set package 'coordinates_generator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.694s] DEBUG:colcon.colcon_core.verb:Building package 'coordinates_generator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/agilex/agilex_mx/build/coordinates_generator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/agilex/agilex_mx/install/coordinates_generator', 'merge_install': False, 'path': '/home/agilex/agilex_mx/src/coordinates_generator', 'symlink_install': False, 'test_result_base': None}
+[0.702s] Level 5:colcon.colcon_core.verb:set package 'ejecucion' build argument 'cmake_args' from command line to 'None'
+[0.702s] Level 5:colcon.colcon_core.verb:set package 'ejecucion' build argument 'cmake_target' from command line to 'None'
+[0.702s] Level 5:colcon.colcon_core.verb:set package 'ejecucion' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.702s] Level 5:colcon.colcon_core.verb:set package 'ejecucion' build argument 'cmake_clean_cache' from command line to 'False'
+[0.702s] Level 5:colcon.colcon_core.verb:set package 'ejecucion' build argument 'cmake_clean_first' from command line to 'False'
+[0.702s] Level 5:colcon.colcon_core.verb:set package 'ejecucion' build argument 'cmake_force_configure' from command line to 'False'
+[0.702s] Level 5:colcon.colcon_core.verb:set package 'ejecucion' build argument 'ament_cmake_args' from command line to 'None'
+[0.702s] Level 5:colcon.colcon_core.verb:set package 'ejecucion' build argument 'catkin_cmake_args' from command line to 'None'
+[0.702s] Level 5:colcon.colcon_core.verb:set package 'ejecucion' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.702s] DEBUG:colcon.colcon_core.verb:Building package 'ejecucion' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/agilex/agilex_mx/build/ejecucion', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/agilex/agilex_mx/install/ejecucion', 'merge_install': False, 'path': '/home/agilex/agilex_mx/src/ejecucion', 'symlink_install': False, 'test_result_base': None}
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'tracker' build argument 'cmake_args' from command line to 'None'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'tracker' build argument 'cmake_target' from command line to 'None'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'tracker' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'tracker' build argument 'cmake_clean_cache' from command line to 'False'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'tracker' build argument 'cmake_clean_first' from command line to 'False'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'tracker' build argument 'cmake_force_configure' from command line to 'False'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'tracker' build argument 'ament_cmake_args' from command line to 'None'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'tracker' build argument 'catkin_cmake_args' from command line to 'None'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'tracker' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.709s] DEBUG:colcon.colcon_core.verb:Building package 'tracker' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/agilex/agilex_mx/build/tracker', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/agilex/agilex_mx/install/tracker', 'merge_install': False, 'path': '/home/agilex/agilex_mx/src/tracker', 'symlink_install': False, 'test_result_base': None}
+[0.716s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.724s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.724s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/agilex/agilex_mx/src/coordinates_generator' with build type 'ament_python'
+[0.724s] Level 1:colcon.colcon_core.shell:create_environment_hook('coordinates_generator', 'ament_prefix_path')
+[0.732s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.732s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/agilex/agilex_mx/install/coordinates_generator/share/coordinates_generator/hook/ament_prefix_path.ps1'
+[0.733s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/agilex/agilex_mx/install/coordinates_generator/share/coordinates_generator/hook/ament_prefix_path.dsv'
+[0.733s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/agilex/agilex_mx/install/coordinates_generator/share/coordinates_generator/hook/ament_prefix_path.sh'
+[0.741s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.741s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.773s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/agilex/agilex_mx/src/ejecucion' with build type 'ament_python'
+[0.774s] Level 1:colcon.colcon_core.shell:create_environment_hook('ejecucion', 'ament_prefix_path')
+[0.781s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/agilex/agilex_mx/install/ejecucion/share/ejecucion/hook/ament_prefix_path.ps1'
+[0.781s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/agilex/agilex_mx/install/ejecucion/share/ejecucion/hook/ament_prefix_path.dsv'
+[0.781s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/agilex/agilex_mx/install/ejecucion/share/ejecucion/hook/ament_prefix_path.sh'
+[0.789s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.789s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.821s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/agilex/agilex_mx/src/tracker' with build type 'ament_python'
+[0.821s] Level 1:colcon.colcon_core.shell:create_environment_hook('tracker', 'ament_prefix_path')
+[0.829s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/agilex/agilex_mx/install/tracker/share/tracker/hook/ament_prefix_path.ps1'
+[0.829s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/agilex/agilex_mx/install/tracker/share/tracker/hook/ament_prefix_path.dsv'
+[0.830s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/agilex/agilex_mx/install/tracker/share/tracker/hook/ament_prefix_path.sh'
+[0.837s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.837s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.025s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/agilex/agilex_mx/src/coordinates_generator'
+[1.033s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.033s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.237s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/agilex/agilex_mx/src/ejecucion'
+[1.245s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.245s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.432s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/agilex/agilex_mx/src/tracker'
+[1.440s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.440s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.707s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/agilex/agilex_mx/src/ejecucion': PYTHONPATH=/home/agilex/agilex_mx/build/ejecucion/prefix_override:/home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ejecucion build --build-base /home/agilex/agilex_mx/build/ejecucion/build install --record /home/agilex/agilex_mx/build/ejecucion/install.log --single-version-externally-managed
+[1.717s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/agilex/agilex_mx/src/tracker': PYTHONPATH=/home/agilex/agilex_mx/build/tracker/prefix_override:/home/agilex/agilex_mx/install/tracker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tracker build --build-base /home/agilex/agilex_mx/build/tracker/build install --record /home/agilex/agilex_mx/build/tracker/install.log --single-version-externally-managed
+[1.718s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/agilex/agilex_mx/src/coordinates_generator': PYTHONPATH=/home/agilex/agilex_mx/build/coordinates_generator/prefix_override:/home/agilex/agilex_mx/install/coordinates_generator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/coordinates_generator build --build-base /home/agilex/agilex_mx/build/coordinates_generator/build install --record /home/agilex/agilex_mx/build/coordinates_generator/install.log --single-version-externally-managed
+[1.917s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/agilex/agilex_mx/src/ejecucion' returned '0': PYTHONPATH=/home/agilex/agilex_mx/build/ejecucion/prefix_override:/home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ejecucion build --build-base /home/agilex/agilex_mx/build/ejecucion/build install --record /home/agilex/agilex_mx/build/ejecucion/install.log --single-version-externally-managed
+[1.929s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/ejecucion' for CMake module files
+[1.929s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/ejecucion' for CMake config files
+[1.929s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/ejecucion/lib'
+[1.929s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/ejecucion/bin'
+[1.929s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/ejecucion/lib/pkgconfig/ejecucion.pc'
+[1.929s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/ejecucion/lib/python3.10/site-packages'
+[1.929s] Level 1:colcon.colcon_core.shell:create_environment_hook('ejecucion', 'pythonpath')
+[1.937s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/agilex/agilex_mx/install/ejecucion/share/ejecucion/hook/pythonpath.ps1'
+[1.937s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/agilex/agilex_mx/install/ejecucion/share/ejecucion/hook/pythonpath.dsv'
+[1.937s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/agilex/agilex_mx/install/ejecucion/share/ejecucion/hook/pythonpath.sh'
+[1.937s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/ejecucion/bin'
+[1.937s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ejecucion)
+[1.944s] INFO:colcon.colcon_core.shell:Creating package script '/home/agilex/agilex_mx/install/ejecucion/share/ejecucion/package.ps1'
+[1.945s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/agilex/agilex_mx/install/ejecucion/share/ejecucion/package.dsv'
+[1.945s] INFO:colcon.colcon_core.shell:Creating package script '/home/agilex/agilex_mx/install/ejecucion/share/ejecucion/package.sh'
+[1.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/agilex/agilex_mx/install/ejecucion/share/ejecucion/package.bash'
+[1.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/agilex/agilex_mx/install/ejecucion/share/ejecucion/package.zsh'
+[1.946s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/agilex/agilex_mx/install/ejecucion/share/colcon-core/packages/ejecucion)
+[1.948s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/agilex/agilex_mx/src/tracker' returned '0': PYTHONPATH=/home/agilex/agilex_mx/build/tracker/prefix_override:/home/agilex/agilex_mx/install/tracker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tracker build --build-base /home/agilex/agilex_mx/build/tracker/build install --record /home/agilex/agilex_mx/build/tracker/install.log --single-version-externally-managed
+[1.955s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/tracker' for CMake module files
+[1.955s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/tracker' for CMake config files
+[1.955s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/tracker/lib'
+[1.955s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/tracker/bin'
+[1.955s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/tracker/lib/pkgconfig/tracker.pc'
+[1.956s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/tracker/lib/python3.10/site-packages'
+[1.956s] Level 1:colcon.colcon_core.shell:create_environment_hook('tracker', 'pythonpath')
+[1.963s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/agilex/agilex_mx/install/tracker/share/tracker/hook/pythonpath.ps1'
+[1.963s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/agilex/agilex_mx/install/tracker/share/tracker/hook/pythonpath.dsv'
+[1.963s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/agilex/agilex_mx/install/tracker/share/tracker/hook/pythonpath.sh'
+[1.963s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/tracker/bin'
+[1.964s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tracker)
+[1.971s] INFO:colcon.colcon_core.shell:Creating package script '/home/agilex/agilex_mx/install/tracker/share/tracker/package.ps1'
+[1.971s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/agilex/agilex_mx/install/tracker/share/tracker/package.dsv'
+[1.971s] INFO:colcon.colcon_core.shell:Creating package script '/home/agilex/agilex_mx/install/tracker/share/tracker/package.sh'
+[1.972s] INFO:colcon.colcon_core.shell:Creating package script '/home/agilex/agilex_mx/install/tracker/share/tracker/package.bash'
+[1.972s] INFO:colcon.colcon_core.shell:Creating package script '/home/agilex/agilex_mx/install/tracker/share/tracker/package.zsh'
+[1.972s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/agilex/agilex_mx/install/tracker/share/colcon-core/packages/tracker)
+[1.974s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/agilex/agilex_mx/src/coordinates_generator' returned '0': PYTHONPATH=/home/agilex/agilex_mx/build/coordinates_generator/prefix_override:/home/agilex/agilex_mx/install/coordinates_generator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/coordinates_generator build --build-base /home/agilex/agilex_mx/build/coordinates_generator/build install --record /home/agilex/agilex_mx/build/coordinates_generator/install.log --single-version-externally-managed
+[1.980s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/coordinates_generator' for CMake module files
+[1.980s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/coordinates_generator' for CMake config files
+[1.980s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/coordinates_generator/lib'
+[1.980s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/coordinates_generator/bin'
+[1.980s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/coordinates_generator/lib/pkgconfig/coordinates_generator.pc'
+[1.981s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/coordinates_generator/lib/python3.10/site-packages'
+[1.981s] Level 1:colcon.colcon_core.shell:create_environment_hook('coordinates_generator', 'pythonpath')
+[1.996s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/agilex/agilex_mx/install/coordinates_generator/share/coordinates_generator/hook/pythonpath.ps1'
+[1.996s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/agilex/agilex_mx/install/coordinates_generator/share/coordinates_generator/hook/pythonpath.dsv'
+[1.996s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/agilex/agilex_mx/install/coordinates_generator/share/coordinates_generator/hook/pythonpath.sh'
+[1.996s] Level 1:colcon.colcon_core.environment:checking '/home/agilex/agilex_mx/install/coordinates_generator/bin'
+[1.997s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(coordinates_generator)
+[2.004s] INFO:colcon.colcon_core.shell:Creating package script '/home/agilex/agilex_mx/install/coordinates_generator/share/coordinates_generator/package.ps1'
+[2.005s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/agilex/agilex_mx/install/coordinates_generator/share/coordinates_generator/package.dsv'
+[2.005s] INFO:colcon.colcon_core.shell:Creating package script '/home/agilex/agilex_mx/install/coordinates_generator/share/coordinates_generator/package.sh'
+[2.005s] INFO:colcon.colcon_core.shell:Creating package script '/home/agilex/agilex_mx/install/coordinates_generator/share/coordinates_generator/package.bash'
+[2.005s] INFO:colcon.colcon_core.shell:Creating package script '/home/agilex/agilex_mx/install/coordinates_generator/share/coordinates_generator/package.zsh'
+[2.005s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/agilex/agilex_mx/install/coordinates_generator/share/colcon-core/packages/coordinates_generator)
+[2.006s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.006s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.006s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.006s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.017s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.017s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.017s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.025s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.033s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/agilex/agilex_mx/install/local_setup.ps1'
+[2.034s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/agilex/agilex_mx/install/_local_setup_util_ps1.py'
+[2.035s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/agilex/agilex_mx/install/setup.ps1'
+[2.045s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/agilex/agilex_mx/install/local_setup.sh'
+[2.045s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/agilex/agilex_mx/install/_local_setup_util_sh.py'
+[2.045s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/agilex/agilex_mx/install/setup.sh'
+[2.055s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/agilex/agilex_mx/install/local_setup.bash'
+[2.055s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/agilex/agilex_mx/install/setup.bash'
+[2.063s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/agilex/agilex_mx/install/local_setup.zsh'
+[2.064s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/agilex/agilex_mx/install/setup.zsh'

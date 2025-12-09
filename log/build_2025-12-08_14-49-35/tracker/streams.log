@@ -1,0 +1,22 @@
+[0.879s] Invoking command in '/home/agilex/agilex_mx/src/tracker': PYTHONPATH=/home/agilex/agilex_mx/build/tracker/prefix_override:/home/agilex/agilex_mx/install/tracker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tracker build --build-base /home/agilex/agilex_mx/build/tracker/build install --record /home/agilex/agilex_mx/build/tracker/install.log --single-version-externally-managed
+[1.044s] running egg_info
+[1.045s] writing ../../build/tracker/tracker.egg-info/PKG-INFO
+[1.045s] writing dependency_links to ../../build/tracker/tracker.egg-info/dependency_links.txt
+[1.045s] writing entry points to ../../build/tracker/tracker.egg-info/entry_points.txt
+[1.045s] writing requirements to ../../build/tracker/tracker.egg-info/requires.txt
+[1.045s] writing top-level names to ../../build/tracker/tracker.egg-info/top_level.txt
+[1.045s] reading manifest file '../../build/tracker/tracker.egg-info/SOURCES.txt'
+[1.046s] writing manifest file '../../build/tracker/tracker.egg-info/SOURCES.txt'
+[1.046s] running build
+[1.046s] running build_py
+[1.046s] running install
+[1.046s] running install_lib
+[1.047s] running install_data
+[1.047s] running install_egg_info
+[1.049s] removing '/home/agilex/agilex_mx/install/tracker/lib/python3.10/site-packages/tracker-0.0.1-py3.10.egg-info' (and everything under it)
+[1.049s] Copying ../../build/tracker/tracker.egg-info to /home/agilex/agilex_mx/install/tracker/lib/python3.10/site-packages/tracker-0.0.1-py3.10.egg-info
+[1.049s] running install_scripts
+[1.064s] Installing follower script to /home/agilex/agilex_mx/install/tracker/lib/tracker
+[1.064s] Installing person_detector script to /home/agilex/agilex_mx/install/tracker/lib/tracker
+[1.064s] writing list of installed files to '/home/agilex/agilex_mx/build/tracker/install.log'
+[1.147s] Invoked command in '/home/agilex/agilex_mx/src/tracker' returned '0': PYTHONPATH=/home/agilex/agilex_mx/build/tracker/prefix_override:/home/agilex/agilex_mx/install/tracker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tracker build --build-base /home/agilex/agilex_mx/build/tracker/build install --record /home/agilex/agilex_mx/build/tracker/install.log --single-version-externally-managed
