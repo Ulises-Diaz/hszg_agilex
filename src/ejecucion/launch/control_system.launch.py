@@ -1,3 +1,11 @@
+
+'''
+
+FALTA AGREGAR EN ESTE LAUNCH EL NODO DE LA CAMARA. 
+
+'''
+
+
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.actions import IncludeLaunchDescription
@@ -46,4 +54,12 @@ def generate_launch_description():
             #     {'distance_threshold': 0.5},  # 50cm de distancia mínima
             # ]
         ),
+
+        # Node(
+        #     package='orbbec_camera',
+        #     executable='dabai',
+        #     name='dabai',
+        #     output='screen',
+
+        # )
     ])
