@@ -182,13 +182,11 @@ class PersonTrackerNode(Node):
         except Exception as e:
             self.get_logger().error(f'Error RGB: {str(e)}')
     
-    # ⭐ Inicializar Kalman
     def init_kalman_filter(self, x, y):
-        """Inicializar Kalman para la persona seleccionada"""
         kf = KalmanFilter(dim_x=4, dim_z=2)
-        kf.x = np.array([x, y, 0., 0.])  # [x, y, vx, vy]
+        kf.x = np.array([x, y, 0., 0.])  
         
-        dt = 0.1  # ~10 Hz
+        dt = 0.1  
         kf.F = np.array([[1, 0, dt, 0],
                          [0, 1, 0, dt],
                          [0, 0, 1, 0],
@@ -197,9 +195,9 @@ class PersonTrackerNode(Node):
         kf.H = np.array([[1, 0, 0, 0],
                          [0, 1, 0, 0]])
         
-        kf.R *= 5    # ruido de medición
-        kf.P *= 10   # incertidumbre inicial
-        kf.Q *= 0.1  # ruido del proceso
+        kf.R *= 5    # measure noise
+        kf.P *= 10   # uncertity
+        kf.Q *= 0.1  # process noise<
         
         return kf
     
