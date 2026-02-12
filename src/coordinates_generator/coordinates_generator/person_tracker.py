@@ -787,7 +787,7 @@ class PersonTrackerNode(Node):
             del self.tracks[track_id]
     
     def calculate_iou(self, bbox1, bbox2):
-        """Calcular Intersection over Union"""
+
         x1_min, y1_min, x1_max, y1_max = bbox1
         x2_min, y2_min, x2_max, y2_max = bbox2
         
